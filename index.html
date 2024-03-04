@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>MLM Task Schedule</h2>
+<h2 id="Timestamp"></h2>
+<div>
+<h3>Schedule A:</h3>
+<p id="ScheduleA"></p>
+<h3>Schedule B:</h3>
+<p id="ScheduleB"></p>
+<h3>Schedule C:</h3>
+<p id="ScheduleC">Colin</p>
+</div>
+<script>
+const currentDay = new Date();
+const givenYear = 2023;
+const givenMonth = 08; // Remember months are zero-indexed (0 for January)
+const givenDay = 14;
+const givenDate = new Date(givenYear, givenMonth, givenDay);
+const daysDifference = Math.floor((currentDay.getTime() - givenDate.getTime()) / (1000 * 60 * 60 * 24));
+document.getElementById("Timestamp").innerHTML = currentDay;
+if (daysDifference % 2 != 0) {
+    document.getElementById("ScheduleA").innerHTML = "Jonathan";
+    document.getElementById("ScheduleB").innerHTML = "Kush";
+} else {
+    document.getElementById("ScheduleA").innerHTML = "Kush";
+    document.getElementById("ScheduleB").innerHTML = "Jonathan";
+}
+</script> 
+</body>
+</html>
